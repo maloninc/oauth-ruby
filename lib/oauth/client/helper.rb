@@ -3,6 +3,7 @@ require 'oauth/consumer'
 require 'oauth/helper'
 require 'oauth/token'
 require 'oauth/signature/hmac/sha1'
+require 'oauth/signature/hmac/sha256'
 
 module OAuth::Client
   class Helper
@@ -11,7 +12,7 @@ module OAuth::Client
     def initialize(request, options = {})
       @request = request
       @options = options
-      @options[:signature_method] ||= 'HMAC-SHA1'
+      @options[:signature_method] ||= 'HMAC-SHA256'
     end
 
     def options

@@ -10,7 +10,7 @@ module OAuth
     #      "parameters" => {
     #        "oauth_consumer_key"     => oauth_consumer_key,
     #        "oauth_token"            => oauth_token,
-    #        "oauth_signature_method" => "HMAC-SHA1"
+    #        "oauth_signature_method" => "HMAC-SHA256"
     #      }
     #
     #   signature = OAuth::Signature.sign \

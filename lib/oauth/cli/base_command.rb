@@ -85,7 +85,7 @@ class OAuth::CLI
 
     def _option_parser_defaults
       options[:oauth_nonce] = OAuth::Helper.generate_key
-      options[:oauth_signature_method] = "HMAC-SHA1"
+      options[:oauth_signature_method] = "HMAC-SHA256"
       options[:oauth_timestamp] = OAuth::Helper.generate_timestamp
       options[:oauth_version] = "1.0"
       options[:method] = :post
@@ -139,7 +139,7 @@ class OAuth::CLI
         options[:params] << v
       end
 
-      opts.on("--signature-method METHOD", "Specifies the signature method to use; defaults to HMAC-SHA1.") do |v|
+      opts.on("--signature-method METHOD", "Specifies the signature method to use; defaults to HMAC-SHA256.") do |v|
         options[:oauth_signature_method] = v
       end
 

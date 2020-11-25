@@ -18,8 +18,8 @@ module OAuth
     CA_FILE = nil unless defined?(CA_FILE)
 
     @@default_options = {
-      # Signature method used by server. Defaults to HMAC-SHA1
-      :signature_method   => 'HMAC-SHA1',
+      # Signature method used by server. Defaults to HMAC-SHA256
+      :signature_method   => 'HMAC-SHA256',
 
       # default paths on site. These are the same as the defaults set up by the generators
       :request_token_path => '/oauth/request_token',

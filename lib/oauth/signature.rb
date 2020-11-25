@@ -15,6 +15,7 @@ module OAuth
         ((c = request.options[:consumer]) && c.options[:signature_method]) ||
         "").downcase]
       raise UnknownSignatureMethod, request.signature_method unless klass
+      puts "DEBUG: Using #{klass.name}" if ENV['OAUTH_DEBUG']
       klass.new(request, options, &block)
     end
 
